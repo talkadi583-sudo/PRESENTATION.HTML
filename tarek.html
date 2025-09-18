@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Présentation PC - Composants Internes</title>
+<style>
+  /* Reset */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0; padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #eee;
+    overflow-x: hidden;
+  }
+  .presentation {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+  }
+  section {
+    max-width: 900px;
+    text-align: center;
+    display: none;
+  }
+  section.active {
+    display: block;
+  }
+  h1, h2 {
+    color: #00bcd4;
+    margin-bottom: 0.5rem;
+  }
+  h3 {
+    margin-bottom: 1rem;
+    color: #4dd0e1;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  .photo-placeholder {
+    width: 80%;
+    max-width: 600px;
+    height: 300px;
+    margin: 1rem auto;
+    border: 3px dashed #00bcd4;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00bcd4;
+    font-weight: 600;
+    font-size: 1.2rem;
+    background: rgba(0, 188, 212, 0.05);
+  }
+  footer {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    user-select: none;
+  }
+  /* Navigation */
+  .nav-buttons {
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  button {
+    background: #00bcd4;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #121212;
+    box-shadow: 0 4px 8px rgba(0,188,212,0.5);
+    transition: background 0.3s;
+  }
+  button:hover {
+    background: #008ba3;
+    color: #fff;
+  }
+  @media (max-width: 600px) {
+    .photo-placeholder {
+      width: 90%;
+      height: 500px;
+    }
+  }
+  img {   width: 450px;  }
+</style>
+</head>
+<body>
+
+<div class="presentation">
+
+  <section class="active" id="slide1">
+    <h1>Anatomie d’un PC : Analyse Technique des Composants Internes</h1>
+    <p><strong>Objectif :</strong> Présenter de manière technique et structurée les différents composants internes d’un ordinateur de bureau, en expliquant leur rôle, leur fonctionnement, et leurs caractéristiques techniques.</p>
+    <div class="photo-placeholder"><img src="1.png" > </div>
+  </section>
+
+  <section id="slide2">
+    <h2>La Carte Mère</h2>
+    <p>La carte mère est le composant principal qui connecte tous les autres éléments entre eux. Elle détermine les compatibilités (processeur, RAM, stockage, etc.) et permet les échanges de données.</p>
+    <h3>Éléments clés :</h3>
+    <ul>
+      <li>Socket processeur : ex. LGA 1700 (Intel), AM5 (AMD)</li>
+      <li>Chipset : ex. B550, Z790 (gère les fonctionnalités)</li>
+      <li>Connecteurs RAM, PCIe, SATA, M.2</li>
+      <li >Facteur de forme : ATX, Micro-ATX, Mini-ITX</li>
+    </ul> 
+    <div class="photo-placeholder"><img src="2.png "></div>
+  </section>
+
+  <section id="slide3">
+    <h2>Le Processeur (CPU)</h2>
+    <p>Le CPU est le cerveau de l’ordinateur. Il exécute les instructions et traite les données.</p>
+    <h3>Caractéristiques :</h3>
+    <ul>
+      <li>Marque : Intel / AMD</li>
+      <li>Nombre de cœurs et threads</li>
+      <li>Fréquence (GHz)</li>
+      <li>Cache (L2, L3)</li>
+      <li>Compatibilité socket</li>
+    </ul>
+    <div class="photo-placeholder"><img src="3.png " style="width: 300px;"></div>
+  </section>
+
+  <section id="slide4">
+    <h2>Le Système de Refroidissement</h2>
+    <p>Permet de dissiper la chaleur produite par le CPU et d’autres composants.</p>
+    <h3>Types de refroidissement :</h3>
+    <ul>
+      <li>Air cooling (ventirad)</li>
+      <li>Water cooling (AIO ou custom)</li>
+    </ul>
+    <div class="photo-placeholder"><img src="4.png " style="width: 300px;"></div>
+  </section>
+
+  <section id="slide5">
+    <h2>La Mémoire Vive (RAM)</h2>
+    <p>Stocke temporairement les données utilisées par le système pour des accès rapides.</p>
+    <h3>Caractéristiques :</h3>
+    <ul>
+      <li>Type : DDR4 / DDR5</li>
+      <li>Capacité : ex. 16 Go, 32 Go</li>
+      <li>Fréquence : ex. 3200 MHz, 5600 MHz</li>
+      <li>Nombre de barrettes (dual/quad channel)</li>
+    </ul>
+    <div class="photo-placeholder"><img src="5.png " style="width: 300px;"></div>
+  </section>
+
+  <section id="slide6">
+    <h2>Le Stockage</h2>
+    <p>Permet de stocker le système d’exploitation, les logiciels et les fichiers.</p>
+    <h3>Types de stockage :</h3>
+    <ul>
+      <li>HDD : grande capacité, lent</li>
+      <li>SSD SATA : rapide</li>
+      <li>SSD NVMe (M.2) : très rapide</li>
+    </ul>
+    <div class="photo-placeholder"><img src="6.png " style="width: 350px;"></div>
+  </section>
+
+  <section id="slide7">
+    <h2>La Carte Graphique (GPU)</h2>
+    <p>Gère l’affichage et les calculs graphiques (jeux, rendu 3D, IA…).</p>
+    <h3>Caractéristiques :</h3>
+    <ul>
+      <li>Mémoire vidéo (VRAM)</li>
+      <li>Architecture : ex. NVIDIA RTX, AMD Radeon</li>
+      <li>Interface PCIe</li>
+    </ul>
+    <div class="photo-placeholder"><img src="7.png " style="width: 300px;"></div>
+  </section>
+
+  <section id="slide8">
+    <h2>L’Alimentation (PSU)</h2>
+    <p>Fournit l’énergie électrique à tous les composants.</p>
+    <h3>Caractéristiques :</h3>
+    <ul>
+      <li>Puissance (Watt)</li>
+      <li>Certification (80 PLUS Bronze, Gold...)</li>
+      <li>Modularité (modulaire, semi, non modulaire)</li>
+    </ul>
+    
+  </section>
+
+  <section id="slide9">
+    <h2>Le Boîtier (Châssis)</h2>
+    <p>Enveloppe tous les composants. Influence la ventilation, l’espace, et la gestion des câbles.</p>
+    <h3>Formats & options :</h3>
+    <ul>
+      <li>ATX, Micro-ATX, Mini-ITX</li>
+      <li>Panneau transparent, filtres à poussière, gestion des câbles, RGB…</li>
+    </ul>
+    <div class="photo-placeholder"><img src="9.png " style="width: 300px;"></div>
+  </section>
+
+  <section id="slide10">
+    <h2>Connectivité & Périphériques</h2>
+    <p>Éléments à considérer pour la connectique et les périphériques :</p>
+    <ul>
+      <li>Ports USB / HDMI / Ethernet / Audio</li>
+      <li>Wi-Fi / Bluetooth intégrés</li>
+      <li>Périphériques : écran, clavier, souris, etc.</li>
+    </ul>
+    <div class="photo-placeholder"><img src="10.png " style="width: 300px;"></div>
+  </section>
+
+  <section id="slide11">
+    <h2>Exemple de Configuration Complète</h2>
+    <p>Exemple de PC gaming ou bureautique :</p>
+    <ul style="text-align:left; max-width: 600px; margin: 0 auto 1.5rem;">
+      <li>Processeur : AMD Ryzen 5 5600</li>
+      <li>Carte mère : MSI B550M PRO-VDH</li>
+      <li>RAM : 16 Go DDR4 3200 MHz</li>
+      <li>Stockage : 1 To NVMe SSD</li>
+      <li>Carte graphique : NVIDIA RTX 4060</li>
+      <li>Alimentation : 650W 80+ Bronze</li>
+      <li>Boîtier : ATX avec ventilateurs RGB</li>
+    </ul>
+    <div class="photo-placeholder"><img src="11.png " style="width: 300px;"></div>
+  </section>
+
+  <section id="slide12">
+    <h2>Conclusion</h2>
+    <p>
+      Chaque composant joue un rôle fondamental.<br />
+      La compatibilité entre les éléments est essentielle.<br />
+      Une bonne configuration dépend des besoins (bureautique, gaming, pro).
+    </p>
+
+  </section>
+
+  <footer>
+     &copy; ALKADI TAREK 
+  </footer>
+
+  <div class="nav-buttons">
+    <button id="prevBtn">Précédent</button>
+    <button id="nextBtn">Suivant</button>
+  </div>
+
+</div>
+
+<script>
+  const slides = document.querySelectorAll('section');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  document.getElementById('prevBtn').addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  });
+
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if(e.key === "ArrowRight") {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    } else if(e.key === "ArrowLeft") {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+  });
+
+  showSlide(currentSlide);
+</script>
+
+</body>
+</html>
